@@ -16,5 +16,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Build with Maven
+    - name: Build core with Maven
       run: mvn -B package --file spring-test-context-cache-limiter/pom.xml
+    - name: Build example with Maven
+      run: mvn -B package --file spring-test-context-cache-limiter-example/pom.xml
