@@ -20,5 +20,4 @@ public class MockingService2Test extends BaseTest {
     public void contextLoads() throws Exception {
         assertThat(delegatingService).isNotNull();
     }
-
 }
