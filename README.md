@@ -25,7 +25,7 @@ It is available on central maven:
   <groupId>com.teketik</groupId>
   <artifactId>spring-test-context-cache-limiter</artifactId>
   <version>boot2-v1.0</version>
-  <scope>test</test>
+  <scope>test</scope>
 </dependency>
 ```
 
