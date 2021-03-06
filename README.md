@@ -31,7 +31,7 @@ It is available on central maven:
 
 Once included in your maven project as a `test` dependency, you can simply annotate any `@SpringBootTest` with: `@BootstrapWith(LimitingContextsBootstrapper.class)`
 
-To specify the maximum number of contexts that should be created during all your tests, use the environment variable: `spring.test.context.limitSize`.
+To specify the maximum number of contexts that should be created during all your tests, use the environment variable: `spring.test.context.limitSize`. (No limit will be enforced if the number configured is missing/invalid)
 
 See [spring-test-context-cache-limiter-example](spring-test-context-cache-limiter-example) for a concrete example
 
