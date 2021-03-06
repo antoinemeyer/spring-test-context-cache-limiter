@@ -23,5 +23,7 @@ Caused by: java.lang.IllegalStateException: Number of test contexts exceeds conf
 -----
 
 Note:
+
 A profile `one-context-limit` has also been added in the pom.xml to show an example of this configuration enforced by maven.
-Running `mvn clean install -Pone-context-limit` would result in a similar failured.
+
+Running `mvn clean install -Pone-context-limit` would result in a similar failure.
