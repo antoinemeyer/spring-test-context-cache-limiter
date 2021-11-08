@@ -5,6 +5,7 @@ This project gives you the ability to fail a test suite when a specific number o
 ## Why?
 
 It has never been easier to write Spring Boot integration tests!
+
 Using `@SpringBootTest` in a base class is one of the most common ways to ensure your tests cover the whole spectrum of your application.
 
 It is not always easy to exclude beans that should not be used during the test (like any beans managing third-party API connections or costly I/O services).
@@ -13,7 +14,7 @@ Unfortunately, dirtying the context this way often makes the context unique and 
 Every context that is unique requires a whole context recreation.
 This is usually not a big deal on smaller projects when a context gets created in a second. It may be problematic however as your project grows and when you have hundreds of context recreation that each take multiple seconds.
 
-This module gives a way to specify a limit to the number of contexts that can be created so that a test build may explicitely fail when that number is reached, forcing the developer to find a more suitable and non-dirtying alternative and thus ensure that your build time remains acceptable.
+This module gives a way to specify a limit to the number of contexts that can be created so that a test build may explicitly fail when that number is reached, forcing the developer to find a more suitable and non-dirtying alternative and thus ensure that your build time remains acceptable.
 
 
 ## Usage
@@ -24,12 +25,12 @@ It is available on central maven:
 <dependency>
   <groupId>com.teketik</groupId>
   <artifactId>spring-test-context-cache-limiter</artifactId>
-  <version>boot2-v1.0</version>
+  <version>boot2-v1.1</version>
   <scope>test</scope>
 </dependency>
 ```
 
-Once included in your maven project as a `test` dependency, you can simply annotate any `@SpringBootTest` with: `@BootstrapWith(LimitingContextsBootstrapper.class)`
+Once included in your maven project as a `test` dependency, it will by default automatically log the number of contexts created (under logger `logging.level.com.teketik.test=DEBUG`) with log message `Number of contexts: XX (no limit enforced)`.
 
 To specify the maximum number of contexts that should be created during all your tests, use the environment variable: `spring.test.context.limitSize`. (No limit will be enforced if the number configured is missing/invalid)
 
