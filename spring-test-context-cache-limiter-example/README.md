@@ -8,7 +8,7 @@ Those tests are quite similar and use a `@MockBean` on different spring beans wh
 
 Running `mvn clean install` will show you the two tests running successfully in two different contexts.
 
-Both those tests are annotated with `@BootstrapWith(LimitingContextsBootstrapper.class)` but no limit is specified in the default maven profile and therefore no limit is enforced.
+No limit is specified in the default maven profile and therefore no limit is enforced.
 
 Running `mvn clean install -Dspring.test.context.limitSize=1` will result in a failed build as the maximum number of contexts allowed is set to 1.
 
