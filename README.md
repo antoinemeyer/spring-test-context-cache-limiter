@@ -32,7 +32,7 @@ It is available on central maven:
 
 Once included in your maven project as a `test` dependency, it will by default automatically log the number of contexts created (under logger `logging.level.com.teketik.test=DEBUG`) with log message `Number of contexts: XX (no limit enforced)`.
 
-To specify the maximum number of contexts that should be created during all your tests, use the environment variable: `spring.test.context.limitSize`. (No limit will be enforced if the number configured is missing/invalid)
+Use the environment variable `spring.test.context.limitSize` to specify the maximum number of contexts that should be created during all your tests. Your build will fail if the number of contexts created exceeds this value.
 
 See [spring-test-context-cache-limiter-example](spring-test-context-cache-limiter-example) for a concrete example
 
