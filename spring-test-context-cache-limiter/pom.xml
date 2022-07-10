@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.teketik</groupId>
     <artifactId>spring-test-context-cache-limiter</artifactId>
-    <version>boot2-v1.1</version>
+    <version>boot2-v1.2</version>
     <name>Spring Boot Test Context Cache Limiter</name>
     <description>Limits the number of contexts created by Spring during tests</description>
     <url>https://github.com/antoinemeyer/spring-test-context-cache-limiter</url>

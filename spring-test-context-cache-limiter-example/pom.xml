@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.teketik</groupId>
     <artifactId>spring-test-context-cache-limiter</artifactId>
-    <version>2</version>
+    <version>3</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.9.RELEASE</version>
+        <version>2.2.13.RELEASE</version>
         <relativePath />
     </parent>
 
@@ -48,7 +48,7 @@
         <dependency>
             <groupId>com.teketik</groupId>
             <artifactId>spring-test-context-cache-limiter</artifactId>
-            <version>boot2-v1.1</version>
+            <version>boot2-v1.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>

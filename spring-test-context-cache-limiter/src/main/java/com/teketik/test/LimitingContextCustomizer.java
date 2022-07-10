@@ -81,5 +81,34 @@ public class LimitingContextCustomizer implements ContextCustomizer {
                 + (hasLimits ? "/" + maxContexts : " (no limit enforced)");
     }
 
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((maxContexts == null) ? 0 : maxContexts.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        LimitingContextCustomizer other = (LimitingContextCustomizer) obj;
+        if (maxContexts == null) {
+            if (other.maxContexts != null) {
+                return false;
+            }
+        } else if (!maxContexts.equals(other.maxContexts)) {
+            return false;
+        }
+        return true;
+    }
 
 }
